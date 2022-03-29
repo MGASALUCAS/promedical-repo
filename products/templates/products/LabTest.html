@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="description" content="">
+              <meta name="author" content="">
+            <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+         <title>Promedical</title>
+       <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <!-- Bootstrap core CSS -->
+   <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+       <!-- Custom styles for this template -->
+            <link href="album.css" rel="stylesheet">
+        </head>
+     <body>
+  <!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css">
+    <!--css link-->
+<!--    <link rel="stylesheet" href="pro.css">-->
+    <link rel="stylesheet" href="{% static 'pro.css' %}">
+    <title>PROMEDICAL</title>
+</head>
+
+<body>
+    <!--header section starts-->
+    <header>
+        <!-- <div id="menu-bar" class="fas fa-bars"></div> -->
+        <a href="#" class="logo">
+            <img src="../media/images/P.png" width=" 50px" height="50px"> <span>PROMEDICAL</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="{% url 'index4' %}">home</a>
+            <a href="#about">About us</a>
+            <a href="#services"> Our service</a>
+            <a href="#BLog">Our blog</a>
+            <span>
+              <i class="fa fa-whatsapp"></i>
+              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical">Instant chat</a>
+            </span>
+            <a href="#contact">contact us</a>
+        </nav>
+    </header>
+<!--Header file end-->
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+{% if error %}
+{{ error }}
+<br/>
+<br/>
+{% endif %}
+<h1>LAB TEST AT HOME</h1>
+<br/>
+{% csrf_token %}
+    <script src=""></script>
+
+
+
+    <!-- Lab test at home -->
+      <div style="margin-top:30px; padding-top: 60px;" class="jumbotron">
+        <div class="container">
+          <div class="row" style="padding:0px 0px;">
+            <div id="lab_test_container" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <p style="color: black; font-weight: 700; margin-top: 10px;">Find Your Perfect Private doctor to serve for at your won home.</p>
+              <form method="POST" data-email="computerwizard2022@gmail.com" action="https://script.google.com/macros/s/AKfycbyRNEgkkyHklmnf9_pG0hb4Ph3LQsqfvd-HhyGarRLcFRgjR0aM2qbWqvT5i8CPeuBxFQ/exec" >
+                <input type="hidden" name="_Goal" value="A customer ask for LabTest at home.">
+                   <div class="row">
+                  <!-- validation errors here -->
+                     <div style="margin: 0px 10px 10px 10px; display: none;" class="alert alert-success alert-dismissible fade in clicked_from_popular_subj" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true"></span>
+                        </button>
+                        On click you can choose your own doctor  and make an appointment "Find tutor" button to see a list of professional tutors
+                    </div>
+
+                  <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                    <div class="form-group">
+                      <label for="doctor_profession">DOCTOR PROFESSION: <span class="required">*</span></label>
+                       <select name="doctor_profession" required id="doctor_profession" class="form-control">
+                                       <option value="all_diseases" title="lists all diseases without looking their categories">ALL</option>
+                                       <option value="Malaria" title="Malaria">Malaria</option>
+                                       <option value="Reproductive Health Disease" title="Reproductive Health Disease">Reproductive Health Disease</option>
+                                       <option value="Childrens Diseases" title="Childrens Diseases">Childrens Diseases</option>
+                                       <option value="Mental Health" title="Mental Health">Mental Health</option>
+                                       <option value="Maternal Health" title="Maternal Health.">Maternal Health.</option>
+                       </select>
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                    <div class="form-group">
+                      <label for="location">CHOOSE YOUR LOCATION: <span class="required">*</span></label>
+                       <select name="location" required id="location" class="form-control">
+                        <option value="" title="select subject">SELECT LOCATION</option>
+                                                  <option value="Arusha">Arusha</option>
+                                                  <option value="Dar-es-Salaam">Dar-es-Salaam</option>
+                                                  <option value="Dodoma">Dodoma</option>
+                                                  <option value="Geita">Geita</option>
+                                                  <option value="Iringa">Iringa</option>
+                                                  <option value="Kagera">Kagera</option>
+                                                  <option value="Katavi">Katavi</option>
+                                                  <option value="Kigoma">Kigoma</option>
+                                                  <option value="Kilimanjaro">Kilimanjaro</option>
+                                                  <option value="Lindi">Lindi</option>
+                                                  <option value="Manyara">Manyara</option>
+                                                  <option value="Mara">Mara</option>
+                                                  <option value="Mbeya">Mbeya</option>
+                                                  <option value="Morogoro">Morogoro</option>
+                                                  <option value="Mtwara">Mtwara</option>
+                                                  <option value="Mwanza">Mwanza</option>
+                                                  <option value="Njombe">Njombe</option>
+                                                  <option value="Pemba North Region">Pemba North Region</option>
+                                                  <option value="Pemba South Region">Pemba South Region</option>
+                                                  <option value="Pwani">Pwani</option>
+                                                  <option value="Rukwa">Rukwa</option>
+                                                  <option value="Ruvuma">Ruvuma</option>
+                                                  <option value="Shinyanga">Shinyanga</option>
+                                                  <option value="Simiyu">Simiyu</option>
+                                                  <option value="Singida">Singida</option>
+                                                  <option value="Songea">Songea</option>
+                                                  <option value="Songwe">Songwe</option>
+                                                  <option value="TABORA">TABORA</option>
+                                                  <option value="Tanga">Tanga</option>
+                                                  <option value="Zanzibar North Region">Zanzibar North Region</option>
+                                                  <option value="Zanzibar South Region">Zanzibar South Region</option>
+                                                  <option value="Zanzibar Urban West">Zanzibar Urban West</option>
+                                                  <option value="Somewhere else (Not in the list)">Somewhere else (Not in the list)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                    <div class="form-group">
+                      <label for="sex">Sex: <span class="required">*</span></label>
+                      <select name="sex" required id="sex" class="form-control">
+                        <option value="" title="select sex">SELECT PREFERED SEX</option>
+                                          <option value="Male" title="Male">Male</option>
+                                                 <option value="Female" title="Female">Female</option>
+
+
+
+                      </select>
+                    </div>
+                    </div>
+
+                  <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                    <div class="form-group">
+                      <label for="Meeting_type">Meeting Type: <span class="required">*</span></label>
+                      <select name="Meeting_type" required id="Meeting_type" class="form-control">
+                        <option value="" title="select meeting type">SELECT TYPE OF THE MEETING</option>
+                                                                            <option value="Physical Meeting.">Pysical Meeting.</option>
+                                                                             <option value="Online Meeting.">Online Meeting.</option>
+
+                           </select>
+                        </div>
+                        </div>
+                           <br/>
+                           <br/>
+                          </div>
+                          </div>
+                <button type="submit" id="find_doctor_btn" class="btn btn-primary mb-2">Find a Doctor</button>
+
+                     <!-- Thankyou_message --><br>
+                     <div class="thankyou_message" style="display:none;background:none;border:8px solid gray;border-radius: 40px;width: 400px;padding-top: 15px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;"><br><br>
+                            <h1>Thanks for contacting us!</h1>
+                            <h1>*******</h1>
+                     </div>
+                       </div>
+               </form>
+
+              <div class="find_doctor_by_name" style="text-align: center; margin-top: 50px;">
+                <div style="border-bottom: 7px solid #fff; margin-bottom: -30px;"></div>
+                <span style="height: 50px; width: 50px; border-radius: 50%; background-color: #fff; display: inline-block; font-size: 25px; padding: 7px 2px 0 0; margin-bottom: 10px;">OR</span><br/>
+
+                <a style="margin-bottom: 10px;" href="https://docs.google.com/forms/d/e/1FAIpQLSfw76p-ygtmzZlHT9RyLMoyRXo8o-UQv8_0-eckYZ1I7_bkvg/viewform?usp=sf_link" class="btn btn-lg btn-info">SUBMIT A FORM.</a>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div> <!-- LabTest at home end -->
+
+  <!-- ======= Partners and Supporters Section ======= -->
+<section id="supporters" class="section-with-bg">
+     <div class="has-bg-img bg-purple bg-blend-overlay">
+     <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Partners & Supporters</h2>
+            </div>
+           <h3 style="font-size: 20px; font-style: italic;" >We have a great and sincerely pleasure to our supporters</h3>
+          <br>
+         </div>
+
+         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+             <div class="supporter-logo">
+             <img src="{% static 'sdgs.png'  %}"  height=130 width=330 class="d-inline-block alighn-top" />
+            </div>
+          </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+             <img src="{% static 'University of Dar es salaam.png'  %} "  height=150 width=330 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+             <img src="{% static 'google developers students club.png'  %} "  height=130 width=340 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="{% static 'who.png'  %} "  height=130 width=340 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        </div>
+       </div>
+     </div>
+  </section><!-- End Sponsors Section -->
+
+
+
+<!-- NEWS LETTER -->
+<section id="newsletter" class="text-center bg-secondary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Sign Up for our newsletter</h1>
+                <p>Let us stay in contact for more interesting news.</p>
+                 <form class="row justify-content-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control mb-2 mr-2" placeholder="Name" required>
+                            </div>
+                             <div class="col-auto">
+                               <input type="email" class="form-control mb-2 mr-2" placeholder="E mail" required>
+                            </div>
+                        <div class="col-auto">
+                   </div>
+                 <button class="btn btn-primary mb-2">Submit</button>
+                </form>
+              </div>
+            </div>
+           </div>
+      <div/>
+</section>
+<!--End of the newsletter-->
+
+
+
+    <!--footer section -->
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <p>PROMEDICAL</p>
+                <p style="font-size: 20px;">East Africa,Dar es salaam</p>
+                <p style="font-size: 20px;">Sayansi,Kijitonyama
+                </p>
+                <p style="font-size: 20px;">Phone:+255 689 726 060</p>
+                <p style="font-size: 20px;">E-mail:info@promedical1@gmail.com</p>
+            </div>
+            <div class="box ">
+                <p>Follow us</p>
+                <a href="# " class="fas fa-facebook">facebook</a>
+                <a href="# " class="fas fa-instagram">instagram</a>
+                <a href="# " class="fas fa-twitter">twitter</a>
+                <a href="# " class="fas fa-linkedin">linkedin</a>
+            </div>
+            <div class="box ">
+                <p>Services</p>
+                <a href="# ">Our Team</a>
+                <a href="# ">Suggestion box</a>
+                <a href="# "> Achievement</a>
+                <a href="# "></a>
+            </div>
+            <div class="links" id="link">
+                <a href="#home">home</a>
+                <a href="#about">About us</a>
+                <a href="#services"> Our service</a>
+                <a href="#BLog">Our blog</a>
+                <a href="#contact">contact</a>
+            </div>
+
+        </div>
+        <h1 class="credit">@2022 by Promedical,Inc</h1>
+    </section>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides ");
+        var dots = document.getElementsByClassName("dot ");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none ";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active ", " ");
+        }
+        slides[slideIndex - 1].style.display = "block ";
+        dots[slideIndex - 1].className += " active ";
+    }
+</script>
+
+</html>
+<!--footer section ends-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+  $('.carousel('cycle')').carousel({
+  interval: 50
+    })
+    </script>
+     </body>
+</html>
+<!--  And this is a whole page including the connection with base.html-->

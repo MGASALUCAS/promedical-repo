@@ -1,0 +1,237 @@
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.book .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+
+.book .row .image {
+    flex: 1 1 45rem;
+}
+
+.book .row .image img {
+    width: 100%;
+}
+
+.book .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.book .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.book .row .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.services .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.services .box-container .box:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.features .box-container .box {
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--black);
+}
+
+.features .box-container .box:hover {
+    color: var(--outline-hover);
+    outline-offset: 0rem;
+    /* box-shadow: var(--black);
+    border: var(--black); */
+}
+
+.features .box-container .box img {
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.features .box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    /* grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw); */
+    /* grid-gap: 15px; */
+    gap: 1.5rem;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    background: #333;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box p {
+    font-size: 2.5rem;
+    color: #eee;
+    padding: .7rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: .7rem 0;
+    color: #eee;
+}
+
+.footer .box-container .box a:hover {
+    color: #0000cc;
+    text-decoration: wavy;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: var(--main-color);
+}
+
+#link {
+    justify-content: center;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    justify-content: center;
+    padding: 2.2rem 2rem;
+    color: #fff;
+    border: #6666ff;
+    font-size: 2rem;
+}
+
+.footer .links a:hover {
+    color: #0000cc;
+    background-color: #9999ff;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    border-top: .1rem solid rgba(255, 255, 255, .2);
+}
+
+#link {
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}

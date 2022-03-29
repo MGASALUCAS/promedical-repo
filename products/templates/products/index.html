@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+    {% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css">
+    <!--css link-->
+
+    <link rel="stylesheet" href="{% static 'pro.css' %}">
+    <title>Promedical </title>
+</head>
+
+<body>
+    <!--header section starts-->
+    <header>
+        <!-- <div id="menu-bar" class="fas fa-bars"></div> -->
+        <a href="#" class="logo">
+            <img src="../media/images/P.png" width="50px" height="50px"> <span>PROMEDICAL</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">About us</a>
+            <a href="#services"> Our service</a>
+            <a href="#BLog">Our blog</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+    <home class="home" id="home">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <div class="centered">
+                    <h2> Welcome to our platform!</h2>
+                    <p>Digital health services for suistainable Development goals.</p>
+                    <button class="btn"> Welcome</button>
+                </div>
+                <img src="{% static 'healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg' %}" style="width:100%">
+<!--                <img src="../media/images/healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg" style="width:100%">-->
+                <div class="text" style="color: blue;">Doctors willing to help</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <div class="centered">
+
+                    <p>Digital health services for suistainable Development goals.</p>
+                    <button class="btn"> Welcome</button>
+                </div>
+                 <img src="{% static 'healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg' %}" style="width:100%">
+
+<!--                <img src="../media/images/healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg" style="width:100%;height: 180%;">-->
+                <div class="text" style="color: blue;">Doctors willing to help</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <div class="centered">
+                    <p>Digital health services for suistainable Development goals.</p>
+                    <button class="btn"> Welcome</button>
+                </div>
+                 <img src="{% static 'healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg' %}" style="width:100%">
+
+<!--                <img src="../media/images/healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg" style="width:100%;margin-top: 20px;">-->
+                <div class="text" style="color: blue;">Doctors willing to help</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <!-- <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+    </home>
+
+    <!--book section starts-->
+    <section class="book" id="book">
+        <h1 class="heading">
+            <span>A</span>
+            <span>B</span>
+            <span>O</span>
+            <span>U</span>
+            <span>T</span>
+            <span class="space"></span>
+            <span>U</span>
+            <span>S</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                 <img src="{% static 'Man sitting at home and having online consultation with doctor.jpg' %}" style="width:100%">
+<!--                <img src="../media/images/Man sitting at home and having online consultation with doctor.jpg" alt="">-->
+            </div>
+            <div class="content">
+                <h1>Who are we?</h1>
+                <p>Promedical is an online platform equipped with ranges of features for health care giving using digital technologies to enable access of heatlth information and services in a more convinient way.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem magnam quis laudantium, accusamus commodi nostrum id beatae corporis dolorem, laborum eveniet quam ipsam modi, consequuntur.</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+    </section>
+    <!--book section ends-->
+
+    <!--services section starts-->
+    <section class="services" id="services">
+        <div class="box-container">
+            <div class="box">
+                 <img src="{% static '240_F_97766357_zofuXJcFDaUq2gDApUt89QmH7EoveI2T.jpg' %}" style="width:100%">
+
+<!--                <img src="../media/images/240_F_97766357_zofuXJcFDaUq2gDApUt89QmH7EoveI2T.jpg" alt="" width="70%" height="30%">-->
+                <h3>Our Mission</h3>
+                <p>To bring better and low cost health care services remotely using online consltation and medical test at home.To enable acces of health information through online discussios ,forums while alsi mapping health centers and their services in
+                    google map.</p>
+            </div>
+            <div class="box">
+                <img src="{% static '240_F_105183917_ilTgXjD1IB8P8DvhOT89rSWE8zpwqKuO.jpg' %}" style="width:100%">
+<!--                <img src="../media/images/240_F_105183917_ilTgXjD1IB8P8DvhOT89rSWE8zpwqKuO.jpg" alt="" width="70%" height="30%">-->
+                <h3>Our Why?</h3>
+                <p>Our community has insufficient health facilities, medical supplies and health workers are in huge demand. To reach the global target an additional 18 million health workers are needed, primarily in low and middle countries.</p>
+            </div>
+            <div class="box">
+                <img src="{% static '240_F_218481318_WJlxYgA4824UoyDZnMUAQLsTHffsVXLr.jpg' %}" style="width:100%">
+<!--                <img src="../media/images/240_F_218481318_WJlxYgA4824UoyDZnMUAQLsTHffsVXLr.jpg" alt="" width="70%" height="30%">-->
+                <h3>Our Goals</h3>
+                <p> We aim to ensure universal access to sexual and reproductive health-care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programmes.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--services section ends-->
+
+    <section class="features " id="features ">
+
+        <h1 class="heading">
+            <span>O</span>
+            <span>U</span>
+            <span>R</span>
+            <span class="space"></span>
+            <span>S</span>
+            <span>E</span>
+            <span>R</span>
+            <span>V</span>
+            <span>I</span>
+            <span>C</span>
+            <span>E</span>
+            <span>S</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <h3>Listen to podcast</h3>
+                <p>we talks about your health credentials. what care should you take, come and listen from the most medical professionals.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Online Consultation</h3>
+                <p>We make it easier to live healthier and happy full life. Get into contact with our medical professionals remotely at your own place. We care to support and manage your health problems.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Your health tracker</h3>
+                <p>Making it easy for you to keep up with your health status and progress.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Health navigation</h3>
+                <p>We help you to find location of health centers and their services through google Map. By single click you may find you affordable and cost-effective health service around you.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Blog</h3>
+                <p>Read some of our stories, it worth value. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse molestiae dicta saepe ipsum illum accusamus quas distinctio doloribus ex quia repellat, labore! Natus, eaque.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Lab test at home</h3>
+                <p>We can serve you wherever you are , consult and book your own medical profesional to serve for you at you own place.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 class="heading">
+            <span>O</span>
+            <span>U</span>
+            <span>R</span>
+            <span class="space"></span>
+            <span>P</span>
+            <span>A</span>
+            <span>R</span>
+            <span>T</span>
+            <span>N</span>
+            <span>E</span>
+            <span>R</span>
+            <span>S</span>
+        </h1>
+        <h2 style="text-align: center; font-size: 30px;">It's been a great pleasure working with you.</h2>
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--2">
+                <img src="../media/images/sdgs.png " class="gallery__img " alt="Image 2 ">
+            </figure>
+            <figure class="gallery__item gallery__item--3 ">
+                <img src="../media/images/un.png " class="gallery__img " alt="Image 3 " style="width: 70%;">
+            </figure>
+            <figure class="gallery__item gallery__item--4 ">
+                <img src="../media/images/undp.png " class="gallery__img " alt="Image 4 ">
+            </figure>
+            <figure class="gallery__item gallery__item--5 ">
+                <img src="../media/images/unicef.png " class="gallery__img " alt="Image 5 ">
+            </figure>
+            <figure class="gallery__item gallery__item--6 ">
+                <img src="../media/images/University of Dar es salaam.png " class="gallery__img " alt="Image 6 ">
+            </figure>
+            <figure class="gallery__item gallery__item--6 ">
+                <img src="../media/images/who.png " class="gallery__img " alt="Image 6 ">
+            </figure>
+        </div>
+    </section>
+
+    <!--footer section -->
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <p>PROMEDICAL</p>
+                <p style="font-size: 20px;">East Africa,Dar es salaam</p>
+                <p style="font-size: 20px;">Sayansi,Kijitonyama
+                </p>
+                <p style="font-size: 20px;">Phone:+255 689 726 060</p>
+                <p style="font-size: 20px;">E-mail:info@promedical1@gmail.com</p>
+            </div>
+            <div class="box ">
+                <p>Follow us</p>
+                <a href="# " class="fas fa-facebook">facebook</a>
+                <a href="# " class="fas fa-instagram">instagram</a>
+                <a href="# " class="fas fa-twitter">twitter</a>
+                <a href="# " class="fas fa-linkedin">linkedin</a>
+            </div>
+            <div class="box ">
+                <p>Services</p>
+                <a href="# ">Our Team</a>
+                <a href="# ">Suggestion box</a>
+                <a href="# "> Achievement</a>
+                <a href="# "></a>
+            </div>
+            <div class="links" id="link">
+                <a href="#home">home</a>
+                <a href="#about">About us</a>
+                <a href="#services"> Our service</a>
+                <a href="#BLog">Our blog</a>
+                <a href="#contact">contact</a>
+            </div>
+
+        </div>
+        <h1 class="credit">@2021 by Promedical,Inc</h1>
+    </section>
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides ");
+        var dots = document.getElementsByClassName("dot ");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none ";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active ", " ");
+        }
+        slides[slideIndex - 1].style.display = "block ";
+        dots[slideIndex - 1].className += " active ";
+    }
+</script>
+
+</html>

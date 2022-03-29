@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="description" content="">
+              <meta name="author" content="">
+            <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+         <title>Promedical</title>
+       <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <!-- Bootstrap core CSS -->
+   <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+       <!-- Custom styles for this template -->
+            <link href="album.css" rel="stylesheet">
+        </head>
+     <body>
+  <header>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <div class="container">
+               <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="{% static 'P.png'  %} "  height=130 width=130 class="d-inline-block alighn-top" />
+                         PROMEDICAL
+                            </a>
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+           </span>
+          </button>
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                 <a class="nav-link active" href="{% url 'UserInfo' %}" onclick="">MY INFO.   </a>
+                     <a class="nav-link active" href="javascript:{document.getElementById('logout').submit()}" onclick="">LOGOUT</a>
+                       <form id="logout" method="POST" action="{% url 'logout' %}">
+                          {% csrf_token %}
+                        <input type="hidden" />
+                     </form>
+                {% else %}
+              </div>
+              <a class="nav-link active" href="{% url 'home' %}">HOME </a>
+              <a  class="nav-link active" href="#activities">OUR SERVICES</a>
+              <a class="nav-link active" href="{% url 'index' %}">OUR BLOG</a>
+              <a class="nav-link active" href="#about">ABOUT US</a>
+              <span>
+              <i class="fa fa-whatsapp"></i>
+              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical"> INSTANT CHAT</a>
+              </span>
+              <a class="nav-link active" href="{% url 'signup' %}">SIGNUP</a>
+              <a class="nav-link active" href="{% url 'login' %}">LOGIN</a>
+                {% endif %}
+            </div>
+         </div>
+      </div>
+    </nav>
+  </header>
+<!--Header file end-->
+
+
+  {% block content %}
+
+    {% endblock %}
+
+
+
+
+  <br/>
+  <br/>
+
+
+
+
+
+
+  <!--book section starts-->
+    <section class="book" id="book">
+        <h1 class="heading">
+            <span>A</span>
+            <span>B</span>
+            <span>O</span>
+            <span>U</span>
+            <span>T</span>
+            <span class="space"></span>
+            <span>U</span>
+            <span>S</span>
+        </h1>
+        <div class="row">
+            <div class="image">
+                <img src="../media/images/Man sitting at home and having online consultation with doctor.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1>Who are we?</h1>
+                <p>Promedical is an online platform equipped with ranges of features for health care giving using digital technologies to enable access of heatlth information and services in a more convinient way.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem magnam quis laudantium, accusamus commodi nostrum id beatae corporis dolorem, laborum eveniet quam ipsam modi, consequuntur.</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+    </section>
+    <!--book section ends-->
+
+    <!--services section starts-->
+    <section class="services" id="services">
+        <div class="box-container">
+            <div class="box">
+                <img src="../media/images/240_F_97766357_zofuXJcFDaUq2gDApUt89QmH7EoveI2T.jpg" alt="" width="70%" height="30%">
+                <h3>Our Mission</h3>
+                <p>To bring better and low cost health care services remotely using online consltation and medical test at home.To enable acces of health information through online discussios ,forums while alsi mapping health centers and their services in
+                    google map.</p>
+            </div>
+            <div class="box">
+                <img src="../media/images/240_F_105183917_ilTgXjD1IB8P8DvhOT89rSWE8zpwqKuO.jpg" alt="" width="70%" height="30%">
+                <h3>Our Why?</h3>
+                <p>Our community has insufficient health facilities, medical supplies and health workers are in huge demand. To reach the global target an additional 18 million health workers are needed, primarily in low and middle countries.</p>
+            </div>
+            <div class="box">
+                <img src="../media/images/240_F_218481318_WJlxYgA4824UoyDZnMUAQLsTHffsVXLr.jpg" alt="" width="70%" height="30%">
+                <h3>Our Goals</h3>
+                <p> We aim to ensure universal access to sexual and reproductive health-care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programmes.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--services section ends-->
+
+    <section class="features " id="features ">
+
+        <h1 class="heading">
+            <span>O</span>
+            <span>U</span>
+            <span>R</span>
+            <span class="space"></span>
+            <span>S</span>
+            <span>E</span>
+            <span>R</span>
+            <span>V</span>
+            <span>I</span>
+            <span>C</span>
+            <span>E</span>
+            <span>S</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                <h3>Listen to podcast</h3>
+                <p>we talks about your health credentials. what care should you take, come and listen from the most medical professionals.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Online Consultation</h3>
+                <p>We make it easier to live healthier and happy full life. Get into contact with our medical professionals remotely at your own place. We care to support and manage your health problems.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Your health tracker</h3>
+                <p>Making it easy for you to keep up with your health status and progress.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Health navigation</h3>
+                <p>We help you to find location of health centers and their services through google Map. By single click you may find you affordable and cost-effective health service around you.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Blog</h3>
+                <p>Read some of our stories, it worth value. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus esse molestiae dicta saepe ipsum illum accusamus quas distinctio doloribus ex quia repellat, labore! Natus, eaque.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+
+                <h3>Lab test at home</h3>
+                <p>We can serve you wherever you are , consult and book your own medical profesional to serve for you at you own place.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- &lt;!&ndash; ======= About Section ======= &ndash;&gt;-->
+<!--    <section id="about"  class="about">-->
+<!--      <div class="container">-->
+<!--        <div class="section-title" data-aos="zoom-out">-->
+<!--            <h2>About us</h2>-->
+<!--                <p>Who we are</p>-->
+<!--               </div>-->
+<!--            <div class="row content" data-aos="fade-up">-->
+<!--         <div class="col-lg-6">-->
+<!--     <p>Promedical is an online platform equipped with range of features for health care giving using digital technologies-->
+<!--         to enable access of health information and services in a more and convenient way.-->
+<!--         <br>-->
+<!--         <br>-->
+<!--            <br>-->
+<!--              <h3>Our Mission</h3>-->
+<!--                 To bring better and low cost health care services remotely using online consultation and medical test at home.-->
+<!--                 To enable access of health information through online discussion forums while also mapping health centers and their services in-->
+<!--                 google Map.-->
+<!--                 </p>-->
+<!--              <br/>-->
+<!--            <h3>Our Goals</h3>-->
+<!--            <br>-->
+<!--              <ul>-->
+<!--              <li><i class="ri-check-double-line"></i>To promote healthy lives and promote well-being for all using digital technologies</li>-->
+<!--              <li><i class="ri-check-double-line"></i>To reduce preventable deaths of newborns and children under 5 years of age, with all countries aiming to reduce neonatal mortality to at least as low as 12 per 1,000 live births and under-5 mortality to at least as low as 25 per 1,000 live births through reproductive health care provision.</li>-->
+<!--              <li><i class="ri-check-double-line"></i> To ensure universal access to sexual and reproductive health-care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programmes</li>-->
+<!--              <li><i class="ri-check-double-line"></i> To reduce spread of the epidemics of AIDs , sexual transmitted infections and other communicable diseases</li>-->
+<!--              <li><i class="ri-check-double-line"></i> To reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being.</li>-->
+<!--              </ul>-->
+<!--          </div>-->
+<!--          <div class="col-lg-6 pt-4 pt-lg-0">-->
+<!--            <h3>Our Why?</h3>-->
+<!--             <p>-->
+<!--                Our community hass insufficient health facilities, medical supplies and health workers are in huge demand. To reach the global target an additional 18 million health workers are needed, primarily in low and middle countries.-->
+<!--                 To bridge that gape we are inspired to start promoting health care to the community around us by making well-informed choices and enable access of health services in a simple and more digitalized way to reduce the gap.-->
+
+<!--               <br>-->
+<!--              <br>-->
+<!--            <br>-->
+<!--        <div>-->
+<!--              <img src="{% static 'goal3.jpg'  %} "  height=330 width=530 class="d-inline-block alighn-top" />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--        </div>-->
+<!--         </div>-->
+<!--           </div>-->
+<!--              </section>&lt;!&ndash; End About Section &ndash;&gt;-->
+
+
+
+<!--<br/>-->
+<!--<br/>-->
+
+
+
+
+
+<!--    &lt;!&ndash; ======= Services Section ======= &ndash;&gt;-->
+<!--  <section id="activities" class="services">-->
+<!--    <div class="container">-->
+<!--      <div   class="bg-image"  style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.22), rgba(117, 19, 93, 0.73)),  url('/media/images/digitalization3.jpg');-->
+<!--      background-repeat: no-repeat;-->
+<!--      background-size: cover" >-->
+
+<!--        <div class="section-title" data-aos="zoom-out">-->
+<!--         <h2>OUR SERVICES </h2>-->
+<!--         <p>Our Big vision is the best health care for everyone.</p>-->
+<!--        </div>-->
+<!--        <br/>-->
+<!--        <br/>-->
+
+
+<!--        <div class="row">-->
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">-->
+<!--               <div class="icon"><i class="las la-basketball-ball" style="color: #ff689b;"></i></div>-->
+<!--                <h4 class="btn btn-lg btn-info"><a href="{% url 'detail' %}">Listen to Podcast</a></h4>-->
+<!--                <p class="description">-->
+<!--                   we talks about your health credentials.-->
+<!--                   what care should you take,-->
+<!--                   come and listen from the most medical professionals.-->
+<!--                </p>-->
+<!--             </div>-->
+<!--          </div>-->
+
+<!--         <div class="col-lg-4 col-md-6 mt-5 mt-md-0">-->
+<!--           <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">-->
+<!--             <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>-->
+<!--              <h4 class="btn btn-lg btn-info"><a href="{% url 'GetYourDoctor' %}">Online Consultation.</a></h4>-->
+<!--              <p class="description">-->
+<!--                  We make it easier to live healthier and happy full life.-->
+<!--                  Get into contact with our medical professionals remotely at your own place.-->
+<!--                  We care to support and manage your health problems.-->
+<!--              </p>-->
+<!--           </div>-->
+<!--         </div>-->
+
+<!--        <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">-->
+<!--          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">-->
+<!--            <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>-->
+<!--             <h4 class="btn btn-lg btn-info"><a href="{% url 'UserInfo' %}">Your Health Tracker</a></h4>-->
+<!--              <p class="description">we help to find your health progress.-->
+<!--              </p>-->
+<!--           </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-4 col-md-6 mt-5">-->
+<!--           <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">-->
+<!--            <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>-->
+<!--            <h4 class="btn btn-lg btn-info"><a href="{% url 'GoogleMap' %}">Health Navigation.</a></h4>-->
+<!--             <p class="description">At your hands we help to find location for quality health services you need.</p>-->
+<!--           </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-4 col-md-6 mt-5">-->
+<!--          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">-->
+<!--            <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>-->
+<!--              <h4 class="btn btn-lg btn-info"><a href="{% url 'home' %}">OUR BLOG</a></h4>-->
+<!--              <p class="description">Read some of our stories, it worth value.-->
+<!--             </p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+<!--        <div class="col-lg-4 col-md-6 mt-5">-->
+<!--          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">-->
+<!--            <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>-->
+<!--             <h4 style="margin-bottom: 10px;" class="btn btn-lg btn-info"><a href="{% url 'LabTest' %}">Labtest at home.</a></h4>-->
+<!--              <p class="description">-->
+<!--                Our focus is the community.We reach to the community of students in all special institutions-->
+<!--                empowering them to be the general knowledge and practices relating to mental, sexualy and reproductive health care.-->
+<!--              </p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--   </div>-->
+<!--  </section>&lt;!&ndash; End Services Section &ndash;&gt;-->
+
+
+
+
+  <!-- ======= Partners and Supporters Section ======= -->
+<section id="supporters" class="section-with-bg">
+     <div class="has-bg-img bg-purple bg-blend-overlay">
+     <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Partners & Supporters</h2>
+            </div>
+           <h3 style="font-size: 20px; font-style: italic;" >We have a great and sincerely pleasure to our supporters</h3>
+          <br>
+         </div>
+
+         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-3 col-md-4 col-xs-6">
+             <div class="supporter-logo">
+             <img src="{% static 'sdgs.png'  %}"  height=130 width=330 class="d-inline-block alighn-top" />
+            </div>
+          </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+             <img src="{% static 'University of Dar es salaam.png'  %} "  height=150 width=330 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+             <img src="{% static 'google developers students club.png'  %} "  height=130 width=340 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-xs-6">
+          <div class="supporter-logo">
+            <img src="{% static 'who.png'  %} "  height=130 width=340 class="d-inline-block alighn-top" />
+          </div>
+        </div>
+
+        </div>
+       </div>
+     </div>
+  </section><!-- End Sponsors Section -->
+
+
+
+<!-- NEWS LETTER -->
+<section id="newsletter" class="text-center bg-secondary text-white p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Sign Up for our newsletter</h1>
+                <p>Let us stay in contact for more interesting news.</p>
+                 <form class="row justify-content-center">
+                    <div class="col-auto">
+                        <input type="text" class="form-control mb-2 mr-2" placeholder="Name" required>
+                            </div>
+                             <div class="col-auto">
+                               <input type="email" class="form-control mb-2 mr-2" placeholder="E mail" required>
+                            </div>
+                        <div class="col-auto">
+                   </div>
+                 <button class="btn btn-primary mb-2">Submit</button>
+                </form>
+              </div>
+            </div>
+           </div>
+      <div/>
+</section>
+<!--End of the newsletter-->
+
+
+
+  <!-- ======= Footer ======= -->
+<footer id="footer">
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 footer-info">
+        <h3>Promedical</h3>
+        <p>
+          East Africa, Dar es salaam <br>
+          Sayansi, Kijitonyama. <br><br>
+          <strong>Phone:</strong> +255 689 726 060<br>
+          <strong>Email:</strong> info@mgasa.loucat1@gmail.com<br>
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 footer-links">
+        <h4>Useful Links</h4>
+         <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+           <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Action</a></li>
+           <li><i class="bx bx-chevron-right"></i> <a href="#">Social Impact</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Partners</a></li>
+        </ul>
+      </div>
+        <div class="col-lg-2 col-md-6 footer-links">
+        <h4>Social Media</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Twitter</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Linkedin</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Yahoo</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Who are we?</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Our partiners</a></li>
+               <li><i class="bx bx-chevron-right"></i> <a href="#"> Suggestion Box</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Team</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Achievements</a></li>
+        </ul>
+      </div>
+    </div>
+      <div class="col-lg-4 col-md-6 footer-newsletter">
+        <h4>Our Newsletter</h4>
+           <p>Stay with us! Your Email (required)</p>
+             <form  action="" method="post" id="my-subform">
+               <input  type="email" name="email"><input type="submit" style="background-color: #28C87E;" value="Subscribe">
+             </form>
+        <div id="my-sub-status"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+</div>
+</footer><!-- End Footer -->
+
+
+
+
+<!-- COPYRIGHT -->
+    </div>
+    <footer class="text-muted">
+      <div class="container text-center">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+          <div class="copyright">
+            &copy; <strong><span>2021 by Promedical, Inc.</span></strong>
+          </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+  $('.carousel('cycle')').carousel({
+  interval: 50
+    })
+    </script>
+     </body>
+</html>
+
+
+
+
