@@ -1,69 +1,463 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {% load static %}
-     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="description" content="">
-              <meta name="author" content="">
-            <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-         <title>Promedical</title>
-       <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    {% load static %}-->
+<!--     <meta charset="utf-8">-->
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--            <meta name="description" content="">-->
+<!--              <meta name="author" content="">-->
+<!--            <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">-->
+<!--         <title>Promedical</title>-->
+<!--       <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">-->
     <!-- Bootstrap core CSS -->
    <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+<!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+<!--    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">-->
        <!-- Custom styles for this template -->
-            <link href="album.css" rel="stylesheet">
-        </head>
-     <body>
-  <header>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-           <div class="container">
-               <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{% static 'P.png'  %} "  height=130 width=130 class="d-inline-block alighn-top" />
-                         PROMEDICAL
-                            </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">
-           </span>
-          </button>
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto">
-                {% if user.is_authenticated %}
-                 <a class="nav-link active" href="{% url 'index' %}" onclick="">MY INFO.   </a>
-                     <a class="nav-link active" href="javascript:{document.getElementById('logout').submit()}" onclick="">LOGOUT</a>
-                       <form id="logout" method="POST" action="{% url 'logout' %}">
-                          {% csrf_token %}
-                        <input type="hidden" />
-                     </form>
-                {% else %}
-              </div>
-              <a class="nav-link active" href="{% url 'home' %}">HOME </a>
-              <a  class="nav-link active" href="#activities">OUR SERVICES</a>
-              <a class="nav-link active" href="{% url 'index' %}">OUR BLOG</a>
-              <a class="nav-link active" href="#about">ABOUT US</a>
-              <span>
-              <i class="fa fa-whatsapp"></i>
-              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical"> INSTANT CHAT</a>
-              </span>
-              <a class="nav-link active" href="{% url 'signup' %}">SIGNUP</a>
-              <a class="nav-link active" href="{% url 'login' %}">LOGIN</a>
-                {% endif %}
-            </div>
-         </div>
-      </div>
-    </nav>
-  </header>
+<!--            <link href="album.css" rel="stylesheet">-->
+<!--        </head>-->
+<!--     <body>-->
+<!--  <header>-->
+<!--     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">-->
+<!--           <div class="container">-->
+<!--               <a class="navbar-brand" href="{% url 'home' %}">-->
+<!--                    <img src="{% static 'P.png'  %} "  height=130 width=130 class="d-inline-block alighn-top" />-->
+<!--                         PROMEDICAL-->
+<!--                            </a>-->
+<!--                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--              <span class="navbar-toggler-icon">-->
+<!--           </span>-->
+<!--          </button>-->
+<!--     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--              <div class="navbar-nav ml-auto">-->
+<!--                {% if user.is_authenticated %}-->
+<!--                 <a class="nav-link active" href="{% url 'index' %}" onclick="">MY INFO.   </a>-->
+<!--                     <a class="nav-link active" href="javascript:{document.getElementById('logout').submit()}" onclick="">LOGOUT</a>-->
+<!--                       <form id="logout" method="POST" action="{% url 'logout' %}">-->
+<!--                          {% csrf_token %}-->
+<!--                        <input type="hidden" />-->
+<!--                     </form>-->
+<!--                {% else %}-->
+<!--              </div>-->
+<!--              <a class="nav-link active" href="{% url 'home' %}">HOME </a>-->
+<!--              <a  class="nav-link active" href="#activities">OUR SERVICES</a>-->
+<!--              <a class="nav-link active" href="{% url 'index' %}">OUR BLOG</a>-->
+<!--              <a class="nav-link active" href="#about">ABOUT US</a>-->
+<!--              <span>-->
+<!--              <i class="fa fa-whatsapp"></i>-->
+<!--              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical"> INSTANT CHAT</a>-->
+<!--              </span>-->
+<!--              <a class="nav-link active" href="{% url 'signup' %}">SIGNUP</a>-->
+<!--              <a class="nav-link active" href="{% url 'login' %}">LOGIN</a>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--    </nav>-->
+<!--  </header>-->
 <!--Header file end-->
 
- </head>
+<!-- </head>-->
+
+<!--{% load static %}-->
+
+
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <title>OUR PODCAST</title>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900">-->
+<!--    <link rel="stylesheet" href="fonts/icomoon/style.css">-->
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="css/magnific-popup.css">-->
+<!--    <link rel="stylesheet" href="css/jquery-ui.css">-->
+<!--    <link rel="stylesheet" href="css/owl.carousel.min.css">-->
+<!--    <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">-->
+<!--    <link rel="stylesheet" href="css/aos.css">-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+<!--  </head>-->
+
+
+<!--<body>-->
+<!--  <div class="site-wrap">-->
+<!--    <div class="site-mobile-menu">-->
+<!--      <div class="site-mobile-menu-header">-->
+<!--        <div class="site-mobile-menu-close mt-3">-->
+<!--          <span class="icon-close2 js-menu-toggle"></span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="site-mobile-menu-body"></div>-->
+<!--    </div>-->
+
+<!--<header class="site-navbar py-4 absolute transparent" role="banner">-->
+<!-- <div class="container">-->
+<!--   <div class="row align-items-center">-->
+<!--      <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">-->
+<!--         <div class="container">-->
+<!--           <div class="row align-items-center justify-content-center text-center">-->
+<!--             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">-->
+<!--              <h2 class="text-white font-weight-light mb-2 display-4">Episode 09: How To Create Web Page Using Bootstrap 4</h2>-->
+<!--                <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Mike Smith | 16 September 2017 | 1:30:20</small></span></div>-->
+<!--                 <p><a href="single-post.html" class="btn btn-primary btn-sm py-3 px-4 small">WE NEED A TALK.</a></p>-->
+<!--                  <div class="player">-->
+<!--                    <audio id="player2" preload="none" controls style="max-width: 100%">-->
+<!--                 <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">-->
+<!--              </audio>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+<!--<div class="site-section bg-light">-->
+<!--   <div class="container">-->
+<!--     <div class="row mb-5" data-aos="fade-up">-->
+<!--        <div class="col-md-12 text-center">-->
+<!--           <h2 class="font-weight-bold text-black">Recent Podcasts</h2>-->
+<!--         </div>-->
+<!--     </div>-->
+
+
+<!--<div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">-->
+<!--   <div class="image" style="background-image: url('media/images/mess_4.jpg');"></div>-->
+<!--      <div class="text">-->
+<!--         <h3 class="font-weight-light"><a href="single-post.html">Episode 01: what is comprehensive sexuality and reproductive health education and it's challenges to the teenagers.</a></h3>-->
+<!--            <div class="text-white mb-3"><span class="text-black-opacity-05"><small>By Mark Sneider <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>-->
+<!--            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>-->
+<!--            <div class="player">-->
+<!--            <audio id="" preload="none" controls style="max-width: 100%">-->
+<!--            <source src="{% static 'What is Comprehensive Sexuality Education.mp3'  %}" type="audio/mp3">-->
+<!--            </audio>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+
+
+<!--<div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">-->
+<!--  <div class="image" style="background-image: url('images/img_3.jpg');"></div>-->
+<!--     <div class="text">-->
+<!--         <h3 class="font-weight-light"><a href="single-post.html">Episode 02:Shedding Light on Student Depression _ Jack Park _ TEDxPenn.</a></h3>-->
+<!--            <div class="text-white mb-3"><span class="text-black-opacity-05"><small>By Jack Park. <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>-->
+<!--              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>-->
+<!--                <div class="player">-->
+<!--                 <audio id="" preload="none" controls style="max-width: 100%">-->
+<!--                 <source src="{% static 'Shedding Light on Student Depression _ Jack Park _ TEDxPenn.mp3'  %}" type="audio/mp3">-->
+<!--                </audio>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+<!--<div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">-->
+<!--  <div class="image" style="background-image: url('images/img_4.jpg');"></div>-->
+<!--     <div class="text">-->
+<!--        <h3 class="font-weight-light"><a href="single-post.html">Episode 03: Why you should take a break_ Prioritizing mental health in schools _ Hailey Hardcastle _ TEDxSalem</a></h3>-->
+<!--            <div class="text-white mb-3"><span class="text-black-opacity-05"><small>By Hailey Hardcastle. <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>-->
+<!--                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>-->
+<!--                  <div class="player">-->
+<!--                   <audio id="" preload="none" controls style="max-width: 100%">-->
+<!--                    <source src="{% static 'Why you should take a break_ Prioritizing mental health in schools _ Hailey Hardcastle _ TEDxSalem.mp3'  %}" type="audio/mp3">-->
+<!--                   </audio>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+
+
+
+
+<!--<div class="site-section">-->
+<!--  <div class="container" data-aos="fade-up">-->
+<!--      <div class="row mb-5">-->
+<!--        <div class="col-md-12 text-center">-->
+<!--            <h2 class="font-weight-bold text-black">Behind The Mic</h2>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--        <div class="row">-->
+
+<!--<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">-->
+<!--  <div class="team-member">-->
+<!--     <img src="{% static 'mess.jpg'  %} "  height=330 width=530 class="d-inline-block alighn-top" />-->
+<!--         <div class="text">-->
+<!--             <h2 class="mb-2 font-weight-light h4">Megan Smith</h2>-->
+<!--                <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>-->
+<!--                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>-->
+<!--                <p>-->
+<!--                <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>-->
+<!--                <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>-->
+<!--                <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">-->
+<!--    <div class="team-member">-->
+<!--        <img src="{% static 'P.png'  %} "  height=330 width=530 class="d-inline-block alighn-top" />-->
+<!--            <div class="text">-->
+<!--              <h2 class="mb-2 font-weight-light h4">Brooke Cagle</h2>-->
+<!--                <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>-->
+<!--                   <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>-->
+<!--                    <p>-->
+<!--                    <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>-->
+<!--                    <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>-->
+<!--                    <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">-->
+<!--  <div class="team-member">-->
+<!--     <img src="{% static 'mess.jpg'  %} "  height=330 width=530 class="d-inline-block alighn-top" />-->
+<!--         <div class="text">-->
+<!--             <h2 class="mb-2 font-weight-light h4">Philip Martin</h2>-->
+<!--               <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>-->
+<!--                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>-->
+<!--                  <p>-->
+<!--                  <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>-->
+<!--                  <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>-->
+<!--                  <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>-->
+<!--                  </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--           </div>-->
+<!--          </div>-->
+<!--         </div>-->
+<!--        </div>-->
+<!--       </div>-->
+<!--      </div>-->
+<!--     </div>-->
+<!--    </div>-->
+<!--   </header>-->
+<!--  </div>-->
+<!-- </body>-->
+
+
+
+
+
+
+
+
+
+<!-- NEWS LETTER -->
+<!--<section id="newsletter" class="text-center bg-secondary text-white p-4">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col">-->
+<!--                <h1>Sign Up for our newsletter</h1>-->
+<!--                <p>Let us stay in contact for more interesting news.</p>-->
+<!--                 <form class="row justify-content-center">-->
+<!--                    <div class="col-auto">-->
+<!--                        <input type="text" class="form-control mb-2 mr-2" placeholder="Name" required>-->
+<!--                            </div>-->
+<!--                             <div class="col-auto">-->
+<!--                               <input type="email" class="form-control mb-2 mr-2" placeholder="E mail" required>-->
+<!--                            </div>-->
+<!--                        <div class="col-auto">-->
+<!--                   </div>-->
+<!--                 <button class="btn btn-primary mb-2">Submit</button>-->
+<!--                </form>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--           </div>-->
+<!--      <div/>-->
+<!--</section>-->
+<!--End of the newsletter-->
+
+
+
+  <!-- ======= Footer ======= -->
+<!--<footer id="footer">-->
+<!--<div class="footer-top">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-3 col-md-6 footer-info">-->
+<!--        <h3>Promedical</h3>-->
+<!--        <p>-->
+<!--          East Africa, Dar es salaam <br>-->
+<!--          Sayansi, Kijitonyama. <br><br>-->
+<!--          <strong>Phone:</strong> +255 689 726 060<br>-->
+<!--          <strong>Email:</strong> info@mgasa.loucat1@gmail.com<br>-->
+<!--        </p>-->
+<!--      </div>-->
+
+<!--      <div class="col-lg-2 col-md-6 footer-links">-->
+<!--        <h4>Useful Links</h4>-->
+<!--         <ul>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>-->
+<!--           <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>-->
+<!--             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Action</a></li>-->
+<!--           <li><i class="bx bx-chevron-right"></i> <a href="#">Social Impact</a></li>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Partners</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--        <div class="col-lg-2 col-md-6 footer-links">-->
+<!--        <h4>Social Media</h4>-->
+<!--        <ul>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>-->
+<!--            <li><i class="bx bx-chevron-right"></i> <a href="#">Twitter</a></li>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>-->
+<!--            <li><i class="bx bx-chevron-right"></i> <a href="#">Linkedin</a></li>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Yahoo</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--      <div class="col-lg-3 col-md-6 footer-links">-->
+<!--        <h4>Our Services</h4>-->
+<!--        <ul>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Who are we?</a></li>-->
+<!--             <li><i class="bx bx-chevron-right"></i> <a href="#">Our partiners</a></li>-->
+<!--               <li><i class="bx bx-chevron-right"></i> <a href="#"> Suggestion Box</a></li>-->
+<!--             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Team</a></li>-->
+<!--          <li><i class="bx bx-chevron-right"></i> <a href="#">Achievements</a></li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--      <div class="col-lg-4 col-md-6 footer-newsletter">-->
+<!--        <h4>Our Newsletter</h4>-->
+<!--           <p>Stay with us! Your Email (required)</p>-->
+<!--             <form  action="" method="post" id="my-subform">-->
+<!--               <input  type="email" name="email"><input type="submit" style="background-color: #28C87E;" value="Subscribe">-->
+<!--             </form>-->
+<!--        <div id="my-sub-status"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--</div>-->
+<!--</footer><!-- End Footer -->-->
+
+
+
+
+<!-- COPYRIGHT -->
+<!--    </div>-->
+<!--    <footer class="text-muted">-->
+<!--      <div class="container text-center">-->
+<!--        <p class="float-right">-->
+<!--          <a href="#">Back to top</a>-->
+<!--        </p>-->
+<!--          <div class="copyright">-->
+<!--            &copy; <strong><span>2021 by Promedical, Inc.</span></strong>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--    </footer>-->
+
+
+    <!-- Bootstrap core JavaScript
+<!--    ================================================== -->-->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>-->
+<!--    <script src="../../assets/js/vendor/popper.min.js"></script>-->
+<!--    <script src="../../dist/js/bootstrap.min.js"></script>-->
+<!--    <script src="../../assets/js/vendor/holder.min.js"></script>-->
+<!--    <script>-->
+<!--  $('.carousel('cycle')').carousel({-->
+<!--  interval: 50-->
+<!--    })-->
+<!--    </script>-->
+<!--     </body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMEDICAL</title>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css">
+    <!--css link-->
+    <!--    <link rel="stylesheet" href="pro.css">-->
+<!--    <link rel="stylesheet" href="{% static 'pro.css' %}">-->
+<!--    <title>PROMEDICAL</title>-->
+    <
+
+
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css file link  -->
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+
+</head>
+
+<body>
+
+
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-stethoscope"></i> Pro-medical </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <span>
+              <i class="fa fa-whatsapp"></i>
+              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical">Instant chat</a>
+            </span>
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'index' %}" >Blogs</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <!-- header section ends -->
+
 
 {% load static %}
 
-
-<html lang="en">
-  <head>
+    <section>
+         <head>
     <title>OUR PODCAST</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -99,8 +493,7 @@
          <div class="container">
            <div class="row align-items-center justify-content-center text-center">
              <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-              <h2 class="text-white font-weight-light mb-2 display-4">Episode 09: How To Create Web Page Using Bootstrap 4</h2>
-                <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Mike Smith | 16 September 2017 | 1:30:20</small></span></div>
+                <div class="text-white mb-4"><span class="text-white-opacity-05"><small>By Mgasa Lucas | 01 March 2022 | 1:30:20</small></span></div>
                  <p><a href="single-post.html" class="btn btn-primary btn-sm py-3 px-4 small">WE NEED A TALK.</a></p>
                   <div class="player">
                     <audio id="player2" preload="none" controls style="max-width: 100%">
@@ -113,8 +506,8 @@
     </div>
 
 
-<div class="site-section bg-light">
-   <div class="container">
+<!--<div class="site-section bg-light">-->
+<!--   <div class="container">-->
      <div class="row mb-5" data-aos="fade-up">
         <div class="col-md-12 text-center">
            <h2 class="font-weight-bold text-black">Recent Podcasts</h2>
@@ -167,203 +560,223 @@
               </div>
             </div>
           </div>
+<!-- </header>-->
+   </div>
+
+
+<!--      <hr class="my-5" />-->
+
+    </section>
 
 
 
+    <!-- review section starts  -->
 
+    <section class="review " id="review ">
 
-<div class="site-section">
-  <div class="container" data-aos="fade-up">
-      <div class="row mb-5">
-        <div class="col-md-12 text-center">
-            <h2 class="font-weight-bold text-black">Behind The Mic</h2>
-         </div>
-      </div>
-        <div class="row">
+        <h1 class="heading "> BEHIND <span>THE MIC</span> </h1>
 
-<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-  <div class="team-member">
-     <img src="{% static 'mess.jpg'  %} "  height=330 width=530 class="d-inline-block alighn-top" />
-         <div class="text">
-             <h2 class="mb-2 font-weight-light h4">Megan Smith</h2>
-                <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
-                <p>
-                <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
-                <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
-                <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="box-container ">
 
- <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-    <div class="team-member">
-        <img src="{% static 'P.png'  %} "  height=330 width=530 class="d-inline-block alighn-top" />
-            <div class="text">
-              <h2 class="mb-2 font-weight-light h4">Brooke Cagle</h2>
-                <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>
-                   <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
-                    <p>
-                    <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
-                    <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
-                    <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
-                    </p>
+            <div class="box ">
+<!--                <img src="image/pic-1.png " alt=" ">-->
+                <img class="d-block w-100" src="{% static 'Obedi.jpg' %}" alt=" ">
+                <h3>OBEDI ZABLON</h3>
+                <div class="stars ">
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star-half-alt "></i>
                 </div>
+                <p class="text ">I can't imagine how usefull  it will be just to speak with the doctor online, This is Outstanding!</p>
             </div>
-          </div>
 
-<div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
-  <div class="team-member">
-     <img src="{% static 'mess.jpg'  %} "  height=330 width=530 class="d-inline-block alighn-top" />
-         <div class="text">
-             <h2 class="mb-2 font-weight-light h4">Philip Martin</h2>
-               <span class="d-block mb-2 text-white-opacity-05">Creative Director</span>
-                  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit ullam reprehenderit nemo.</p>
-                  <p>
-                  <a href="#" class="text-white p-2"><span class="icon-facebook"></span></a>
-                  <a href="#" class="text-white p-2"><span class="icon-twitter"></span></a>
-                  <a href="#" class="text-white p-2"><span class="icon-linkedin"></span></a>
-                  </p>
-              </div>
+            <div class="box ">
+<!--                <img src="image/pic-2.png " alt=" ">-->
+                <img class="d-block w-100" src="{% static 'HILLARY.jpg' %}" alt="">
+                <h3>HILLARY KEPHA</h3>
+                <div class="stars ">
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star-half-alt "></i>
+                </div>
+                <p class="text ">This is another revolution in health care , I assure you.</p>
             </div>
-           </div>
-          </div>
-         </div>
+
+            <div class="box ">
+<!--                <img src="image/pic-3.png " alt=" ">-->
+                <img class="d-block w-100" src="{% static 'MgasaLucas.png' %}" alt="">
+                <h3> MGASA LUCAS </h3>
+                <div class="stars ">
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star-half-alt "></i>
+                </div>
+                <p class="text ">I real appreciate the work, It's helpfully </p>
+            </div>
+
         </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </header>
-  </div>
- </body>
+
+    </section>
 
 
 
+<!--      &lt;!&ndash;Section: BEHIND THE MIC 2&ndash;&gt;-->
+<!--    <section class="text-center">-->
+<!--       <h4 class="mb-5"><strong>Behind The Mic</strong></h4>-->
+<!--        <div class="row">-->
+<!--          <div class="col-lg-4 col-md-12 mb-4">-->
+<!--            <div class="card">-->
+<!--              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">-->
+<!--                <img src="{% static 'mess.jpg'  %} "  class="img-fluid" />-->
+<!--                <a href="#!">-->
+<!--                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">-->
+<!--                  Some quick example text to build on the card title and make up the bulk of the-->
+<!--                  card's content.-->
+<!--                </p>-->
+<!--                <a href="#!" class="btn btn-primary">Button</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 mb-4">-->
+<!--            <div class="card">-->
+<!--              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">-->
+<!--                <img src="{% static 'mess.jpg'  %} "  class="img-fluid" />-->
+<!--                <a href="#!">-->
+<!--                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">-->
+<!--                  Some quick example text to build on the card title and make up the bulk of the-->
+<!--                  card's content.-->
+<!--                </p>-->
+<!--                <a href="#!" class="btn btn-primary">Button</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 mb-4">-->
+<!--            <div class="card">-->
+<!--              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">-->
+<!--                <img src="{% static 'mess.jpg'  %}"  class="img-fluid" />-->
+<!--                <a href="#!">-->
+<!--                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">-->
+<!--                  Some quick example text to build on the card title and make up the bulk of the-->
+<!--                  card's content.-->
+<!--                </p>-->
+<!--                <a href="#!" class="btn btn-primary">Button</a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--      &lt;!&ndash;Section: Content&ndash;&gt;-->
+
+<!--&lt;!&ndash;<hr class="my-5" />&ndash;&gt;-->
 
 
 
+    <!-- footer section starts  -->
 
+    <section class="footer ">
 
-
-<!-- NEWS LETTER -->
-<section id="newsletter" class="text-center bg-secondary text-white p-4">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Sign Up for our newsletter</h1>
-                <p>Let us stay in contact for more interesting news.</p>
-                 <form class="row justify-content-center">
-                    <div class="col-auto">
-                        <input type="text" class="form-control mb-2 mr-2" placeholder="Name" required>
-                            </div>
-                             <div class="col-auto">
-                               <input type="email" class="form-control mb-2 mr-2" placeholder="E mail" required>
-                            </div>
-                        <div class="col-auto">
-                   </div>
-                 <button class="btn btn-primary mb-2">Submit</button>
-                </form>
-              </div>
+        <div class="box-container ">
+            <div class="box ">
+                <h3>Promedical</h3>
+                <a href="# "> <i class="fas fa-phone "></i> +255 689 726 060 </a>
+                <a href="# "> <i class="fas fa-envelope "></i> info@ mgasa.loucat1@gmail.com </a>
+                <a href="# "> <i class="fas fa-map-marker-alt "></i>East Africa, Dar es salaam Sayansi, Kijitonyama. </a>
             </div>
-           </div>
-      <div/>
-</section>
-<!--End of the newsletter-->
+
+            <div class="box ">
+                <h3>Quick links</h3>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Home </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Our Services </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> About Us. </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Reviews </a>
+                <a href="{% url 'index' %}"> <i class="fas fa-chevron-right "></i> Our Blog </a>
+            </div>
+
+            <div class="box ">
+                <h3>Our services</h3>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Health Navigation Map </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Listen To Health Podcast </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Online Consultation </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> Health Tracker </a>
+                <a href="# "> <i class="fas fa-chevron-right "></i> E-Pharmacy </a>
+            </div>
+            <div class="box ">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/Mgasa_Lucas"> <i class="fab fa-facebook-f "></i> facebook </a>
+                <a href="https://www.twitter.com/MgasaLucas"> <i class="fab fa-twitter "></i> twitter </a>
+                <a href="https://www.instagram.com/mgasa_loucat/"> <i class="fab fa-instagram "></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit ">@2022 all rights reserved </div>
+
+    </section>
+
+    <!-- footer section ends -->
 
 
+    <!-- custom js file link  -->
+<!--    <script src=" js/script.js "></script>-->
 
-  <!-- ======= Footer ======= -->
-<footer id="footer">
-<div class="footer-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 footer-info">
-        <h3>Promedical</h3>
-        <p>
-          East Africa, Dar es salaam <br>
-          Sayansi, Kijitonyama. <br><br>
-          <strong>Phone:</strong> +255 689 726 060<br>
-          <strong>Email:</strong> info@mgasa.loucat1@gmail.com<br>
-        </p>
-      </div>
+    <script src="{% static '/js/script.js' %}" type="text/javascript"></script>
 
-      <div class="col-lg-2 col-md-6 footer-links">
-        <h4>Useful Links</h4>
-         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-           <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Action</a></li>
-           <li><i class="bx bx-chevron-right"></i> <a href="#">Social Impact</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Partners</a></li>
-        </ul>
-      </div>
-        <div class="col-lg-2 col-md-6 footer-links">
-        <h4>Social Media</h4>
-        <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Twitter</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Linkedin</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Yahoo</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Our Services</h4>
-        <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Who are we?</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our partiners</a></li>
-               <li><i class="bx bx-chevron-right"></i> <a href="#"> Suggestion Box</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Team</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Achievements</a></li>
-        </ul>
-      </div>
-    </div>
-      <div class="col-lg-4 col-md-6 footer-newsletter">
-        <h4>Our Newsletter</h4>
-           <p>Stay with us! Your Email (required)</p>
-             <form  action="" method="post" id="my-subform">
-               <input  type="email" name="email"><input type="submit" style="background-color: #28C87E;" value="Subscribe">
-             </form>
-        <div id="my-sub-status"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-</div>
-</footer><!-- End Footer -->
+</body>
 
-
-
-
-<!-- COPYRIGHT -->
-    </div>
-    <footer class="text-muted">
-      <div class="container text-center">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-          <div class="copyright">
-            &copy; <strong><span>2021 by Promedical, Inc.</span></strong>
-          </div>
-      </div>
-    </footer>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-  $('.carousel('cycle')').carousel({
-  interval: 50
-    })
-    </script>
-     </body>
 </html>
+
+
+
+
+<!--&lt;!&ndash; COPYRIGHT &ndash;&gt;-->
+<!--    </div>-->
+<!--    <footer class="text-muted">-->
+<!--      <div class="container text-center">-->
+<!--        <p class="float-right">-->
+<!--          <a href="#">Back to top</a>-->
+<!--        </p>-->
+<!--          <div class="copyright">-->
+<!--            &copy; <strong><span>2021 by Promedical, Inc.</span></strong>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--    </footer>-->
+
+
+<!--    &lt;!&ndash; Bootstrap core JavaScript-->
+<!--    ================================================== &ndash;&gt;-->
+<!--    &lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>-->
+<!--    <script src="../../assets/js/vendor/popper.min.js"></script>-->
+<!--    <script src="../../dist/js/bootstrap.min.js"></script>-->
+<!--    <script src="../../assets/js/vendor/holder.min.js"></script>-->
+<!--    <script>-->
+<!--  $('.carousel('cycle')').carousel({-->
+<!--  interval: 50-->
+<!--    })-->
+<!--    </script>-->
+<!--     </body>-->
+<!--</html>-->

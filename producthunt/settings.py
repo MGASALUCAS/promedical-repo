@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'products.apps.ProductsConfig',
     'accounts.apps.AccountsConfig',
     'django.contrib.admin',
@@ -76,26 +77,39 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '5432',
-
-    }
-}
-
-#
-#
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+
 #     }
 # }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'promedical$mysqldatabase',
+#         'USER': 'promedical',
+#         'PASSWORD': 'YANGUMWENYEWEmysql',
+#         'HOST': 'promedical.mysql.pythonanywhere-services.com',
+#     }
+# }
+
+
+
+#
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -137,9 +151,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'producthunt/static/')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
 
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/promedical/promedical-repo/static'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')  # This provide a root directory to where should we save and store our media  files
 MEDIA_URL = '/media/'  # this provides url for our media file

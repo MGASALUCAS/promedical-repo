@@ -15,7 +15,7 @@ from .forms import PrivateDoctor
 # Create your views here.
 def home(request):
     products = Product.objects
-    return render(request, 'products/index4.html', {'products': products})
+    return render(request, 'products/home2.html', {'products': products})
 
 
 @login_required(login_url="/accounts/signup")

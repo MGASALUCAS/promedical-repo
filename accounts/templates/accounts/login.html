@@ -1,173 +1,160 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
-    {% load static %}
-     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <meta name="description" content="">
-              <meta name="author" content="">
-            <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-<!--      `        <link rel="stylesheet" href="{% static 'pro.css' %}">-->
-         <title>Promedical</title>
-       <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
-    <!-- Bootstrap core CSS -->
-   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
-       <!-- Custom styles for this template -->
-            <link href="album.css" rel="stylesheet">
-        </head>
-     <body>
-  <header>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-           <div class="container">
-               <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{% static 'P.png'  %} "  height=130 width=130 class="d-inline-block alighn-top" />
-                         PROMEDICAL
-                            </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">
-           </span>
-          </button>
-     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto">
-                {% if user.is_authenticated %}
-                 <a class="nav-link active" href="{% url 'UserInfo' %}" onclick="">MY INFO.   </a>
-                     <a class="nav-link active" href="javascript:{document.getElementById('logout').submit()}" onclick="">LOGOUT</a>
-                       <form id="logout" method="POST" action="{% url 'logout' %}">
-                          {% csrf_token %}
-                        <input type="hidden" />
-                     </form>
-                {% else %}
-              </div>
-              <a class="nav-link active" href="{% url 'index4' %}">HOME </a>
-              <a  class="nav-link active" href="#activities">OUR SERVICES</a>
-              <a class="nav-link active" href="{% url 'index' %}">OUR BLOG</a>
-              <a class="nav-link active" href="#about">ABOUT US</a>
-              <span>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>PROMEDICAL - Digital Health care platform.</title>
+    <!-- CSS files -->
+    <link href="{% static 'dist/css/tabler.min.css'  %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-flags.min.css'  %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-payments.min.css'  %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-vendors.min.css'  %}" rel="stylesheet"/>
+    <link href="{% static 'dist/css/demo.min.css'  %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  </head>
+
+
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-stethoscope"></i> Pro-medical </a>
+        <nav class="navbar">
+              <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'home' %}">About</a>
+            <a href="{% url 'home' %}">Services</a>
+            <span>
               <i class="fa fa-whatsapp"></i>
-              <a class="nav-link active" href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical"> INSTANT CHAT</a>
-              </span>
-              <a class="nav-link active" href="{% url 'signup' %}">SIGNUP</a>
-              <a class="nav-link active" href="{% url 'login' %}">LOGIN</a>
-                {% endif %}
-            </div>
-         </div>
-      </div>
-    </nav>
-  </header>
+              <a  href="https://api.whatsapp.com/send?phone=255689726060&text=Hello Promedical">Instant chat</a>
+            </span>
+            <a href="#" >Blogs</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
 <!--Header file end-->
 
  {% load static %}
 
-<!--signup page-->
-<container>
-      <section id="hero" class="d-flex flex-column justify-content-end align-items-center" style="background-image: url(site/assets/img/aibackground.jpg">
+<!--&lt;!&ndash;signup page&ndash;&gt;-->
+<!--<container>-->
+<!--      <section id="hero" class="d-flex flex-column justify-content-end align-items-center" style="background-image: url(site/assets/img/aibackground.jpg">-->
 
-<br/>
-{% if error %}
-{{ error }}
-<br/>
-<br/>
-{% endif %}
-<h1>Already had an account, Login!</h1>
-<br/>
-<form method="POST" action="{% url 'login' %}" >    <!--#this asks people to post their info as they will want to signup.-->
-{% csrf_token %}
-Username:
-<br />
-<input type="text" name='Username' />
-<br />
-Password:
-<br />
-<input type="text" name='Password' />
-<br />
-<br />
-<input class="btn btn-primary" type="submit" value="Login " />
-</form>
-
-
-      </section>
-</container>
-<!-- End of sign up -->
+<!--<br/>-->
+<!--{% if error %}-->
+<!--{{ error }}-->
+<!--<br/>-->
+<!--<br/>-->
+<!--{% endif %}-->
+<!--<h1>Already had an account, Login!</h1>-->
+<!--<br/>-->
+<!--<form method="POST" action="{% url 'login' %}" >    &lt;!&ndash;#this asks people to post their info as they will want to signup.&ndash;&gt;-->
+<!--{% csrf_token %}-->
+<!--Username:-->
+<!--<br />-->
+<!--<input type="text" name='Username' />-->
+<!--<br />-->
+<!--Password:-->
+<!--<br />-->
+<!--<input type="text" name='Password' />-->
+<!--<br />-->
+<!--<br />-->
+<!--<input class="btn btn-primary" type="submit" value="Login " />-->
+<!--</form>-->
 
 
+<!--      </section>-->
+<!--</container>-->
+<!--&lt;!&ndash; End of sign up &ndash;&gt;-->
 
-   <!-- ======= Footer ======= -->
-<footer id="footer" class="text-center bg-secondary text-white p-4">
-<div class="footer-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 footer-info">
-        <h3>Promedical</h3>
-        <p>
-          East Africa, Dar es salaam <br>
-          Sayansi, Kijitonyama. <br><br>
-          <strong>Phone:</strong> +255 689 726 060<br>
-          <strong>Email:</strong> info@mgasa.loucat1@gmail.com<br>
-        </p>
-      </div>
 
-      <div class="col-lg-2 col-md-6 footer-links">
-        <h4>Useful Links</h4>
-         <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-           <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Action</a></li>
-           <li><i class="bx bx-chevron-right"></i> <a href="#">Social Impact</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Partners</a></li>
-        </ul>
-      </div>
-        <div class="col-lg-2 col-md-6 footer-links">
-        <h4>Social Media</h4>
-        <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Instagram</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Twitter</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Linkedin</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Yahoo</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Our Services</h4>
-        <ul>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Who are we?</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our partiners</a></li>
-               <li><i class="bx bx-chevron-right"></i> <a href="#"> Suggestion Box</a></li>
-             <li><i class="bx bx-chevron-right"></i> <a href="#">Our Team</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="#">Achievements</a></li>
-        </ul>
+
+
+
+
+<body  class=" border-top-wide border-primary d-flex flex-column">
+    <div class="page page-center">
+      <div class="container-tight py-4">
+        <div class="text-center mb-4">
+          <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.svg" height="36" alt=""></a>
+        </div>
+
+
+            <br/>
+            {% if error %}
+            {{ error }}
+            <br/>
+            <br/>
+            {% endif %}
+            <h1>Already had an account, Login!</h1>
+            <br/>
+
+
+        <form class="card card-md" method="POST" action="{% url 'login' %}" autocomplete="off">
+          <div class="card-body">
+              {% csrf_token %}
+            <h2 class="card-title text-center mb-4">Login to your account</h2>
+
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" name='Username' class="form-control" placeholder="Enter Username" autocomplete="off">
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">
+                Password
+                <span class="form-label-description">
+                  <a href="#forgot-password.html">I forgot password</a>
+                </span>
+              </label>
+              <div class="input-group input-group-flat">
+                <input type="text" name='Password' class="form-control"  placeholder="Password"  autocomplete="off">
+                <span class="input-group-text">
+                  <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="2" /><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" /></svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+
+            <div class="mb-2">
+              <label class="form-check">
+                <input type="checkbox" class="form-check-input"/>
+                <span class="form-check-label">Remember me on this device</span>
+              </label>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" value="Login " class="btn btn-primary w-100">Sign in</button>
+            </div>
+          </div>
+<!--          <div class="hr-text">or</div>-->
+          <div class="card-body">
+            <div class="row">
+<!--              <div class="col"><a href="#" class="btn btn-white w-100">-->
+<!--                  &lt;!&ndash; Download SVG icon from http://tabler-icons.io/i/brand-github &ndash;&gt;-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>-->
+<!--                  Login with Github-->
+<!--                </a></div>-->
+<!--              <div class="col"><a href="#" class="btn btn-white w-100">-->
+<!--                  &lt;!&ndash; Download SVG icon from http://tabler-icons.io/i/brand-twitter &ndash;&gt;-->
+<!--                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" /></svg>-->
+<!--                  Login with Twitter-->
+<!--                </a>-->
+<!--              </div>-->
+            </div>
+          </div>
+        </form>
+
+        <div class="text-center text-muted mt-3">
+          Don't have account yet? <a href="{% url 'signup'%}" tabindex="-1">Sign up</a>
+        </div>
       </div>
     </div>
-      <div class="col-lg-4 col-md-6 footer-newsletter">
-        <h4>Our Newsletter</h4>
-           <p>Stay with us! Your Email (required)</p>
-             <form  action="" method="post" id="my-subform">
-               <input  type="email" name="email"><input type="submit" style="background-color: #28C87E;" value="Subscribe">
-             </form>
-        <div id="my-sub-status"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-</div>
-</footer><!-- End Footer -->
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-  $('.carousel('cycle')').carousel({
-  interval: 50
-    })
-    </script>
-     </body>
+    <!-- Libs JS -->
+    <!-- Tabler Core -->
+    <script src="./dist/js/tabler.min.js" defer></script>
+    <script src="./dist/js/demo.min.js" defer></script>
+  </body>
 </html>

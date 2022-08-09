@@ -99,30 +99,30 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active ">
-      <img class="d-block w-100" src="{% static 'healthcare-medical-concept-medicine-doctor-stethoscope-hand-standing-confidently-patients-coming-to-hospital-124449230.jpg'  %}" height=530 width=730 alt="First slide">
+      <img class="d-block w-1000" src="{% static 'Research week UDSM.jpg'  %}" height=530 width=1000 alt="First slide">
            <div class="carousel-caption d-none d-md-block">
-             <h5>OUR MESSAGE 1</h5>
-             <p>Our Goals and Targets 1</p>
+             <h5>UNIVERSITY OF DAR ES SALAAM RESEARCH WEEK-2022</h5>
+             <p>From 20-22 April, We exhibit this work during annual Research and innovation week under University of Dar es salaam with the mission to enabling the access of health services in this Digital error.</p>
            </div>
     </div>
 
-    <div class="carousel-item ">
-      <img class="d-block w-100" src="{% static 'african-american-video-call-conference-doctor-212484040.jpg' %}"   height=530 width=730 alt="Second slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>OUR MESSAGE 2</h5>
-            <p>Goals and Targets 2</p>
-          </div>
-    </div>
+    <!--<div class="carousel-item ">-->
+    <!--  <img class="d-block w-100" src="{% static 'african-american-video-call-conference-doctor-212484040.jpg' %}"   height=530 width=730 alt="Second slide">-->
+    <!--      <div class="carousel-caption d-none d-md-block">-->
+    <!--        <h5>OUR MESSAGE 2</h5>-->
+    <!--        <p>Goals and Targets 2</p>-->
+    <!--      </div>-->
+    <!--</div>-->
 
 
-    <div class="carousel-item  ">
-      <img class="d-block w-100" src="{% static 'african-doctor-video-conference-call-talking-african-doctor-video-conference-call-talking-patient-211509132.jpg'%}"  height=530 width=730  alt="Third slide">
-         <div class="carousel-caption d-none d-md-block">
-            <h5>OUR MESSAGE 3</h5>
-            <p>Goals and Targets 3</p>
-         </div>
-    </div>
-  </div>
+  <!--  <div class="carousel-item  ">-->
+  <!--    <img class="d-block w-100" src="{% static 'african-doctor-video-conference-call-talking-african-doctor-video-conference-call-talking-patient-211509132.jpg'%}"  height=530 width=730  alt="Third slide">-->
+  <!--       <div class="carousel-caption d-none d-md-block">-->
+  <!--          <h5>OUR MESSAGE 3</h5>-->
+  <!--          <p>Goals and Targets 3</p>-->
+  <!--       </div>-->
+  <!--  </div>-->
+  <!--</div>-->
 
    <!--<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">-->
    <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
@@ -178,12 +178,13 @@
 <!--</form>-->
 
 
-
-<script>
-$('.carousel').carousel({
-  interval: 2000
-})
-</script>
+<!--auto sliding-->
+<!--<script>-->
+<!--$('.carousel').carousel({-->
+<!--  interval: 20000-->
+<!--})-->
+<!--</script>-->
+<!--end of auto sliding-->
 
 
 
@@ -249,18 +250,15 @@ $('.carousel').carousel({
 
 
     <!-- ======= Services Section ======= -->
-  <section id="activities" class="services">
-    <div class="container-center">
-      <div   class="bg-image"  style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.22), rgba(117, 19, 93, 0.73)),  url('/media/images/digitalization3.jpg');
-      background-repeat: no-repeat;
-      background-size: cover" >
+  <section id="services" class="services-center">
+    <div class="services-center" >
 
         <div class="section-title" data-aos="zoom-out">
-         <h2>OUR SERVICES </h2>
-         <p>With our community we aim to work in partnership with the community to promote and protect the health and social well-being.</p>
+           <h2>OUR SERVICES </h2>
+           <p>With our community we aim to work in partnership with the community to promote and protect the health and social well-being.</p>
         </div>
-        <br/>
-        <br/>
+          <br/>
+          <br/>
 
 
         <div class="row">
@@ -303,11 +301,11 @@ $('.carousel').carousel({
 
         <div class="col-lg-4 col-md-6 mt-5">
            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-            <h4 class="btn btn-lg btn-info"><a href="{% url 'GoogleMap' %}">HEALTH NAVIGATION MAP.</a></h4>
-             <p class="description"> We help you find location of health centers and their services through google Map. By single click you may find you affordable and cost-effective health service around you.</p>
+             <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
+              <h4 class="btn btn-lg btn-info"><a href="{% url 'GoogleMap' %}">HEALTH NAVIGATION MAP.</a></h4>
+              <p class="description"> We help you find location of health centers and their services through google Map. By single click you may find you affordable and cost-effective health service around you.</p>
+             </div>
            </div>
-        </div>
 
         <div class="col-lg-4 col-md-6 mt-5">
           <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
@@ -330,10 +328,83 @@ $('.carousel').carousel({
           </div>
         </div>
 
-      </div>
-    </div>
    </div>
   </section><!-- End Services Section -->
+
+
+
+
+
+   <!--Section: OUR TEAM-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>MEET OUR TEAM</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{% static 'MGASA LUCAS ROBERT.png'  %} " height=330 width=330  class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">MGASA LUCAS- Software Developer</h5>
+                <p class="card-text">
+                  19 yeard old inventor, Budding changemaker and self taught software guru.
+                  Since his childhood, He has been pursuing technology with the mission to solve community challenges.
+                  To this team , He is a software and health advocate passionately to enable access of health care services using digital tools.
+                </p>
+                <a href="{% url 'home' %}" class="btn btn-primary">Exprole</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{% static 'ABDALLAH KINGU.jpg'  %} " height=330 width=330  class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">ABDALLAH KINGU- Health Advocate</h5>
+                <p class="card-text">
+                  He is a talente podcast presenter in various topics purposely to share knowledge and other life experieces to his community.
+                  For the time being He is workig on recording Audio content and share to give knowledge to youths and society as whole on the issues of health care and
+                  good lifestyles for better health.
+                </p>
+                <a href="{% url 'home' %}" class="btn btn-primary">Exprole</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{% static 'KEMMIE.png'  %}" height=330 width=330  class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">KEMMIE MTAGABWA-Frontend Designer</h5>
+                <p class="card-text">
+                  Community activist, Technology mover and computer scientist. She is a hard worker working tirelessy
+                  to learn and sharing her experience looking forward on how to use technology to solve community needs.
+                </p>
+                <a href="{% url 'home' %}" class="btn btn-primary">Exprole</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: OUR TEAM-->
+
+
+
+
 
 
 
@@ -453,11 +524,15 @@ $('.carousel').carousel({
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-  $('.carousel('cycle')').carousel({
-  interval: 50
-    })
-    </script>
+
+    <!--auto sliding-->
+  <!--  <script>-->
+  <!--$('.carousel('cycle')').carousel({-->
+  <!--interval: 5000-->
+  <!--  })-->
+  <!--  </script>-->
+    <!--end of auto sliding-->
+
      </body>
 </html>
 
