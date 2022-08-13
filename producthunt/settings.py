@@ -99,9 +99,6 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 #         'HOST': 'promedical.mysql.pythonanywhere-services.com',
 #     }
 # }
-
-
-
 #
 
 DATABASES = {
@@ -148,17 +145,16 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'producthunt/static/')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 
-
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = '/home/promedical/promedical-repo/static'
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = '/home/promedical/promedical-repo/static'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')  # This provide a root directory to where should we save and store our media  files
 MEDIA_URL = '/media/'  # this provides url for our media file
+MEDIA_ROOT = os.path.join(BASE_DIR,'mediafiles')  # This provide a root directory to where should we save and store our media  files
 
 
 # Default primary key field type
