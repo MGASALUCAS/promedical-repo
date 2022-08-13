@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^nw!2cufxfb#mj7ylf3&^(ot+f8l^^l+*zdsf*r(agk30=tw9^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+
 
 ALLOWED_HOSTS = ["promedical-repo.herokuapp.com"]
+# ALLOWED_HOSTS = []
 
 # Application definition
 
