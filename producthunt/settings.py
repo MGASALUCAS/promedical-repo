@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-^nw!2cufxfb#mj7ylf3&^(ot+f8l^^l+*zdsf*r(agk30=tw9^
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["promedical-repo.herokuapp.com"]
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["promedical-repo.herokuapp.com"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
