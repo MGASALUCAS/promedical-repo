@@ -8,4 +8,4 @@ Promedical is an online platform equipped with range of features for health care
   Health Trcaker to have acces of private doctor and track his/her health progress.
   
   
-  Everything is made by # DJANGO
+  # Everything is made by DJANGO
